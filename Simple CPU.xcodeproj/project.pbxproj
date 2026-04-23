@@ -19,12 +19,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		99403D2A2F9A333F00ED236E /* Simple CPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Simple CPU"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99403D2A2F9A333F00ED236E /* Simple CPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Simple CPU"; path = "/Users/ziad/Desktop/Simple CPU/build/Debug/Simple CPU"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		99403D462F9A491A00ED236E /* Exceptions for "Simple CPU" folder in "Compile Sources" phase from "Simple CPU" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 99403D262F9A333F00ED236E /* Sources */;
+			membershipExceptions = (
+				FetchDecodeExecute.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		99403D2C2F9A333F00ED236E /* Simple CPU */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				99403D462F9A491A00ED236E /* Exceptions for "Simple CPU" folder in "Compile Sources" phase from "Simple CPU" target */,
+			);
 			path = "Simple CPU";
 			sourceTree = "<group>";
 		};
@@ -45,16 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				99403D2C2F9A333F00ED236E /* Simple CPU */,
-				99403D2B2F9A333F00ED236E /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		99403D2B2F9A333F00ED236E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				99403D2A2F9A333F00ED236E /* Simple CPU */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +97,7 @@
 				TargetAttributes = {
 					99403D292F9A333F00ED236E = {
 						CreatedOnToolsVersion = 26.4.1;
+						LastSwiftMigration = 2640;
 					};
 				};
 			};
@@ -106,7 +111,7 @@
 			mainGroup = 99403D212F9A333F00ED236E;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 99403D2B2F9A333F00ED236E /* Products */;
+			productRefGroup = 99403D212F9A333F00ED236E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -244,16 +249,21 @@
 		99403D322F9A333F00ED236E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		99403D332F9A333F00ED236E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
