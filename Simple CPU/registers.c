@@ -1,15 +1,18 @@
-#include<stdio.h>
-#define MASK16 (val) ((val)&0xFFF)
-#define MASK12 (val) ((val)&0xFFF)
+#include <stdio.h>
+#define registers
+
+#define MASK16(val) ((val)&0xFFFF)
+#define MASK12(val) ((val)&0xFFFF)
+
 // 16-bit registers
-int AC     = 0;
-int IR     = 0;
-int MBR    = 0;
-int InREG  = 0;
+int AC = 0;
+int IR = 0;
+int MBR = 0;
+int InREG = 0;
 int OutREG = 0;
 
 // 12-bit registers (stored in 16-bit but masked on write)
-int PC  = 0;
+int PC = 0;
 int MAR = 0;
 
 // Data bus
