@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "registers.c"
-#include "fetchDecodeExcute.c"
-int halted=0;
+#include "registers.h"
+#include "fetchDecodeExecute.h"
+
+int halted = 0;
 
 void LOAD(void) {
     write_MAR(address);
@@ -27,7 +28,7 @@ void ADD(void) {
     write_AC(AC+data_bus);
 }
 
-void Subt(void) {
+void SUBT(void) {
     write_MAR(address);
     data_bus=mem_read(MAR);
     write_MBR(data_bus);
@@ -39,7 +40,7 @@ void JUMP(void) {
     write_PC(address);
 }
 
-void input(void) {
+void IN(void) {
     printf("input: ");
     int input_value;
     scanf("%d", &input_value);
@@ -47,7 +48,7 @@ void input(void) {
     write_AC(data_bus);
 }
 
-void output(void) {
+void OUT(void) {
     data_bus = AC;
     printf("output: %d\n", data_bus);
 }

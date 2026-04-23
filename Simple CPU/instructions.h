@@ -5,11 +5,20 @@
 //  Created by Ziad on 23/04/2026.
 //
 
-#ifndef FetchDecodeExecute_h
-#define FetchDecodeExecute_h
+#ifndef Instructions_h
+#define Instructions_h
 
-void fetch(void);
-void decode(void);
-void execute(void);
+extern int halted;
+
+void LOAD(void);
+void STORE(void);
+void ADD(void);
+void SUBT(void);
+void HALT(void);
+void JUMP(void);
+void ADDI(void);
+void STOREI(void);
+void IN(void);
+void OUT(void);
 
 #endif /* FetchDecodeExecute_h */

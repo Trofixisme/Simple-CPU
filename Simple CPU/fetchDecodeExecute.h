@@ -8,6 +8,9 @@
 #ifndef FetchDecodeExecute_h
 #define FetchDecodeExecute_h
 
+extern int address;
+extern int opcode;
+
 void fetch(void);
 void decode(void);
 void execute(void);
