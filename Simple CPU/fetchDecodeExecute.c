@@ -25,17 +25,32 @@ void decode(void) {
 void execute(void) {
     
     switch (opcode) {
-    case 1:
-        LOAD();
-        break;
-    case 2:
-        STORE();
-        break;
-    case 3:
-        ADD();
-        break;
-    case 4:
-        SUBT();
-        break;
+        case 1:
+            LOAD();
+            break;
+        case 2:
+            STORE();
+            break;
+        case 3:
+            ADD();
+            break;
+        case 4:
+            SUBT();
+            break;
+        case 5:
+            IN();
+            break;
+        case 6:
+            OUT();
+            break;
+        case 7:
+            HALT();
+            break;
+        case 8:
+            SKIPCOND();
+            break;
+        case 9:
+            JUMP();
+            break;
     }
 }

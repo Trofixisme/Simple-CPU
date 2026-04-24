@@ -20,5 +20,6 @@ void ADDI(void);
 void STOREI(void);
 void IN(void);
 void OUT(void);
+void SKIPCOND(void);
 
 #endif /* FetchDecodeExecute_h */

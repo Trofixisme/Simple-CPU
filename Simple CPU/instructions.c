@@ -7,9 +7,9 @@ int halted = 0;
 
 void LOAD(void) {
     write_MAR(address);
-    data_bus=mem_read(MAR);
+    data_bus = mem_read(MAR);
     write_MBR(data_bus);
-    data_bus=MBR;
+    data_bus = MBR;
     write_AC(data_bus);
 }
 
@@ -30,9 +30,9 @@ void ADD(void) {
 
 void SUBT(void) {
     write_MAR(address);
-    data_bus=mem_read(MAR);
+    data_bus = mem_read(MAR);
     write_MBR(data_bus);
-    data_bus=MBR;
+    data_bus = MBR;
     write_AC(AC-data_bus);
 }
 
@@ -54,10 +54,18 @@ void OUT(void) {
 }
  
 void HALT(void) {
-    halted=1;
+    halted = 1;
     exit(0);
 }
 
 void ADDI(void) {
+    
+}
+
+void STOREI(void) {
+    
+}
+
+void SKIPCOND(void) {
     
 }
