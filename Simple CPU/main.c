@@ -7,6 +7,7 @@
 int main(void) {
     
     while(!halted) {
+        
         fetch();
         decode();
         execute();
