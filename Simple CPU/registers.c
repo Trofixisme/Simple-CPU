@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define registers
 
 #define MASK16(val) ((val)&0xFFFF)
 #define MASK12(val) ((val)&0xFFFF)

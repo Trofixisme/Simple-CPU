@@ -3,6 +3,7 @@
 #include "registers.h"
 #include "fetchDecodeExecute.h"
 
+
 int halted = 0;
 
 void LOAD(void) {
@@ -27,45 +28,48 @@ void ADD(void) {
     data_bus=MBR;
     write_AC(AC+data_bus);
 }
-
-void SUBT(void) {
+void SUBT(){
     write_MAR(address);
-    data_bus = mem_read(MAR);
+    data_bus=mem_read(MAR);
     write_MBR(data_bus);
-    data_bus = MBR;
+    data_bus=MBR;
     write_AC(AC-data_bus);
 }
-
-void JUMP(void) {
+void JUMP(){
     write_PC(address);
 }
-
-void IN(void) {
+void IN(){
     printf("input: ");
     int input_value;
     scanf("%d", &input_value);
     data_bus = input_value;
     write_AC(data_bus);
 }
-
-void OUT(void) {
+void OUT(){
     data_bus = AC;
     printf("output: %d\n", data_bus);
 }
- 
-void HALT(void) {
-    halted = 1;
+void HALT(){
+    halted=1;
     exit(0);
 }
+void CLEAR(){
+    write_AC(0);
+}
+void SKIPCOND(void){
 
-void ADDI(void) {
+}
+void ADDI()
+{
     
 }
+void STOREI(){
 
-void STOREI(void) {
-    
 }
+void LOADI(){
 
-void SKIPCOND(void) {
+}
+void SUBTI()
+{
     
 }
