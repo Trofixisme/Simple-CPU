@@ -6,23 +6,81 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		99F808ED2F9C1D6800F905A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		99F808EF2F9C1D6800F905A4 /* Simple CPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Simple CPU"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		99403D2C2F9A333F00ED236E /* Simple CPU */ = {
+		99F808E42F9C1D2F00F905A4 /* Simple CPU */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Simple CPU";
+			sourceTree = "<group>";
+		};
+		99F808F02F9C1D6800F905A4 /* Simple CPU */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Simple CPU";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		99F808EC2F9C1D6800F905A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		99403D212F9A333F00ED236E = {
 			isa = PBXGroup;
 			children = (
-				99403D2C2F9A333F00ED236E /* Simple CPU */,
+				99F808E42F9C1D2F00F905A4 /* Simple CPU */,
+				99F808EF2F9C1D6800F905A4 /* Simple CPU */,
+				99F808F02F9C1D6800F905A4 /* Simple CPU */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99F808EE2F9C1D6800F905A4 /* Simple CPU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F808F32F9C1D6800F905A4 /* Build configuration list for PBXNativeTarget "Simple CPU" */;
+			buildPhases = (
+				99F808EB2F9C1D6800F905A4 /* Sources */,
+				99F808EC2F9C1D6800F905A4 /* Frameworks */,
+				99F808ED2F9C1D6800F905A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				99F808F02F9C1D6800F905A4 /* Simple CPU */,
+			);
+			name = "Simple CPU";
+			packageProductDependencies = (
+			);
+			productName = "Simple CPU";
+			productReference = 99F808EF2F9C1D6800F905A4 /* Simple CPU */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		99403D222F9A333F00ED236E /* Project object */ = {
@@ -30,6 +88,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					99F808EE2F9C1D6800F905A4 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
 			};
 			buildConfigurationList = 99403D252F9A333F00ED236E /* Build configuration list for PBXProject "Simple CPU" */;
 			developmentRegion = en;
@@ -45,9 +108,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				99F808EE2F9C1D6800F905A4 /* Simple CPU */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99F808EB2F9C1D6800F905A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		99403D2F2F9A333F00ED236E /* Debug */ = {
@@ -165,6 +239,22 @@
 			};
 			name = Release;
 		};
+		99F808F42F9C1D6800F905A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99F808F52F9C1D6800F905A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -173,6 +263,15 @@
 			buildConfigurations = (
 				99403D2F2F9A333F00ED236E /* Debug */,
 				99403D302F9A333F00ED236E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F808F32F9C1D6800F905A4 /* Build configuration list for PBXNativeTarget "Simple CPU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F808F42F9C1D6800F905A4 /* Debug */,
+				99F808F52F9C1D6800F905A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

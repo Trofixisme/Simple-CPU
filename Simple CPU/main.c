@@ -1,17 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include "fetchDecodeExecute.h"
+#include <stdio.h>
+#include "unistd.h"
+#include "registers.h"
 #include "instructions.h"
+#include "fetchDecodeExecute.h"
 
-int main(void) {
+int main(int argc, const char * argv[]) {
     
-    while(!halted) {
+    while (!halted) {
         
         fetch();
-        decode();
-        execute();
-        sleep(1);
         
+        decode();
+        
+        execute();
+        
+        sleep(1);
     }
 }

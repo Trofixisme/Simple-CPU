@@ -5,7 +5,7 @@
 #define MASK12(val) ((val)&0xFFF)
 #define MASK8(val) ((val)&0xFF)
 
-int clock = 0;
+int cpuClock = 0;
 
 // 16-bit registers
 int AC = 0;
@@ -28,45 +28,45 @@ int memory[4096];
 
 void write_AC(int val) {
     AC = MASK16(val);
-    clock++;
+    cpuClock++;
 }
 
 void write_PC(int val) {
     PC = MASK12(val);
-    clock++;
+    cpuClock++;
 }
 
 void write_MAR(int val) {
     MAR = MASK12(val);
-    clock++;
+    cpuClock++;
 }
 
 void write_IR(int val) {
     IR = MASK16(val);
-    clock++;
+    cpuClock++;
 }
 
 void write_MBR(int val) {
     MBR = MASK16(val);
-    clock++;
+    cpuClock++;
 }
 
 void mem_write(int address, int value) {
     memory[MASK12(address)] = MASK16(value);
-    clock++;
+    cpuClock++;
 }
 
 int mem_read(int address) {
+    cpuClock++;
     return memory[MASK12(address)];
-    clock++;
 }
 
-void write_IN(int value) {
-    InREG = MASK8(value)
-    clock++;
+void write_InREG(int value) {
+    InREG = MASK8(value);
+    cpuClock++;
 }
 
-void write_OUT(int value) {
-    OutREG = MASK8(value)
-    clock++;
+void write_OutREG(int value) {
+    OutREG = MASK8(value);
+    cpuClock++;
 }
