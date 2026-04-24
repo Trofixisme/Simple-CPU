@@ -12,14 +12,20 @@ extern int halted;
 
 void LOAD(void);
 void STORE(void);
+
 void ADD(void);
 void SUBT(void);
+
 void HALT(void);
 void JUMP(void);
+
 void ADDI(void);
 void STOREI(void);
+
 void IN(void);
 void OUT(void);
+
 void SKIPCOND(void);
+void CLEAR(void);
 
 #endif /* FetchDecodeExecute_h */

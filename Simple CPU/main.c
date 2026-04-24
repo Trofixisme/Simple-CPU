@@ -6,15 +6,12 @@
 
 int main(void) {
     
-    int clock=0;
-    
     while(!halted) {
         
         fetch();
         decode();
         execute();
         
-        clock++;
         sleep(1);
         
     }

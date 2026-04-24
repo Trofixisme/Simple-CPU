@@ -18,7 +18,7 @@ void fetch(void) {
 void decode(void) {
     
     opcode = (IR >> 12) & 0xF;
-    address = IR & 0x0FFF;
+    write_MAR(IR & 0x0FFF);
     
 }
 
