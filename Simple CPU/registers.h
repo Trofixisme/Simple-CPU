@@ -28,7 +28,7 @@ void write_MBR(int val);
 void mem_write(int address, int value);
 int mem_read(int address);
 
-void write_InREG(int value);
-void write_OutREG(int value);
+void write_IN(int value);
+void write_OUT(int value);
 
 #endif // REGISTERS_H
