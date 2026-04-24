@@ -63,10 +63,10 @@ int mem_read(int address) {
 
 void write_IN(int value) {
     InREG = MASK8(value);
-    cpuClock++;
+    clock++;
 }
 
 void write_OUT(int value) {
     OutREG = MASK8(value);
-    cpuClock++;
+    clock++;
 }
