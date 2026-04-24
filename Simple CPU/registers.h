@@ -3,6 +3,8 @@
 #ifndef REGISTERS_H
 #define REGISTERS_H
 
+extern int cpuClock;
+
 extern int AC;
 extern int IR;
 extern int MBR;

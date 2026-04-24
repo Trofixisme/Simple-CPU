@@ -19,7 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		99403D2A2F9A333F00ED236E /* Simple CPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Simple CPU"; path = "/Users/ziad/Desktop/Simple CPU/build/Debug/Simple CPU"; sourceTree = "<absolute>"; };
+		99F808B52F9C183400F905A4 /* Simple CPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Simple CPU"; path = "/Users/ziad/Desktop/Simple CPU/build/Debug/Simple CPU"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -84,7 +84,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Simple CPU";
-			productReference = 99403D2A2F9A333F00ED236E /* Simple CPU */;
+			productReference = 99F808B52F9C183400F905A4 /* Simple CPU */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
