@@ -1,0 +1,88 @@
+# ================================================================
+#  MARIE CPU - Full Instruction Test Suite
+#
+#  Tests: INPUT, OUTPUT, STORE, LOAD, ADD, SUBT,
+#         CLEAR, SKIPCOND (AC==0 and AC>0), JUMP, HALT
+#
+#  HOW TO RUN:
+#    Copy this file to your "Simple CPU" project folder, then:
+#    ./marie test_all.txt
+#
+#  Enter these 3 inputs when prompted:
+#    10  (first input)
+#     3  (second input)
+#    99  (third input)
+#
+#  EXPECTED OUTPUT:
+#    Output: 10   <- Test 1: INPUT -> OUTPUT passthrough
+#    Output: 13   <- Test 2: ADD  (10 + 3)
+#    Output: 7    <- Test 3: SUBT (10 - 3)
+#    Output: 0    <- Test 4: CLEAR resets AC to 0
+#    Output: 0    <- Test 5: SKIPCOND 1024 (AC==0) skip taken
+#    Output: 10   <- Test 6: SKIPCOND 2048 (AC>0)  skip taken
+#    Output: 99   <- Test 7: STORE then LOAD roundtrip
+#    Output: 99   <- Test 8: JUMP skips over a HALT
+#    CPU halted.  <- HALT reached
+# ================================================================
+
+# --- TEST 1: INPUT / OUTPUT passthrough ---
+# Read a number, output it immediately
+INPUT
+STORE 200
+OUTPUT
+STORE 201
+
+# --- TEST 2: ADD ---
+# Load first input, add second input, output result (10 + 3 = 13)
+LOAD 200
+STORE 202
+INPUT
+STORE 203
+LOAD 202
+ADD 203
+OUTPUT
+
+# --- TEST 3: SUBT ---
+# Subtract second input from first (10 - 3 = 7)
+LOAD 202
+SUBT 203
+OUTPUT
+
+# --- TEST 4: CLEAR ---
+# Reset AC to zero no matter what it holds
+CLEAR
+OUTPUT
+
+# --- TEST 5: SKIPCOND 1024 (skip if AC == 0) ---
+# AC is 0 from CLEAR above; skip should be TAKEN -> OUTPUT runs
+SKIPCOND 1024
+JUMP 20
+OUTPUT
+JUMP 21
+HALT
+
+# --- TEST 6: SKIPCOND 2048 (skip if AC > 0) ---
+# Load first input (10 > 0); skip should be TAKEN -> OUTPUT runs
+LOAD 200
+SKIPCOND 2048
+JUMP 26
+OUTPUT
+JUMP 27
+HALT
+
+# --- TEST 7: STORE / LOAD roundtrip ---
+# Store a fresh input in memory, clear AC, reload it, output
+INPUT
+STORE 210
+CLEAR
+LOAD 210
+OUTPUT
+STORE 211
+
+# --- TEST 8: JUMP over HALT ---
+# JUMP should skip the HALT and land on OUTPUT
+JUMP 35
+HALT
+LOAD 211
+OUTPUT
+HALT

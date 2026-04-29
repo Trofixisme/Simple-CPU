@@ -4,6 +4,7 @@
 #define REGISTERS_H
 
 extern int cpuClock;
+#define MAXSIZE 4096
 
 extern int AC;
 extern int IR;
@@ -13,7 +14,7 @@ extern int OutREG;
 extern int PC;
 extern int MAR;
 extern int data_bus;
-extern int memory[4096];
+extern int memory[MAXSIZE];
 
 #define MASK16(val) ((val)&0xFFFF)
 #define MASK12(val) ((val)&0xFFF)
