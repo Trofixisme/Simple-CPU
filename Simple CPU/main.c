@@ -5,12 +5,15 @@
 #include "instructions.h"
 #include "fetchDecodeExecute.h"
 #include "assembler.h"
-void load_program(const char *filename) {
+
+int load_program(const char *filename) {
+    
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
         printf("Error: could not open file %s\n", filename);
-        return;
+        return 0;
     }
+    
     char line[256];      // buffer to hold each line
     int  address = 0;    // where in memory to store
 
@@ -28,11 +31,14 @@ void load_program(const char *filename) {
     }
 
     fclose(file);
+    return 1;
 }
+
 int main(int argc, const char * argv[]) {
    
-    load_program("program.txt");
-    while (!halted) {
+    
+    //Be sure to temporarily replace this with the absolute filepath if you're using Xcode until someone figures out how to use the relative filepath with Xcode without failing
+    while (!halted && load_program("program.txt")) {
         
         fetch();
         

@@ -30,28 +30,25 @@
 INPUT
 STORE 200
 OUTPUT
-STORE 201
 
 # --- TEST 2: ADD ---
 # Load first input, add second input, output result (10 + 3 = 13)
-LOAD 200
-STORE 202
 INPUT
-STORE 203
-LOAD 202
-ADD 203
+ADD 200
+STORE 201
 OUTPUT
 
 # --- TEST 3: SUBT ---
 # Subtract second input from first (10 - 3 = 7)
-LOAD 202
-SUBT 203
+LOAD 201
+SUBT 200
 OUTPUT
 
 # --- TEST 4: CLEAR ---
 # Reset AC to zero no matter what it holds
 CLEAR
 OUTPUT
+HALT
 
 # --- TEST 5: SKIPCOND 1024 (skip if AC == 0) ---
 # AC is 0 from CLEAR above; skip should be TAKEN -> OUTPUT runs

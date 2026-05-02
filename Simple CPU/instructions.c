@@ -49,7 +49,9 @@ void IN(void) {
     printf("input: ");
     
     int temp;
+    char buffer;
     scanf("%d", &temp);
+    scanf("%c", &buffer);
     
     data_bus = temp;
     write_InREG(temp);
@@ -80,8 +82,8 @@ void SKIPCOND(void) {
     if      (MAR == 0x000 && AC < 0)  write_PC(PC + 1);
     else if (MAR == 0x400 && AC == 0) write_PC(PC + 1);
     else if (MAR == 0x800 && AC > 0)  write_PC(PC + 1);
-
 }
+
 void ADDI(void) {
     // indirect: address field points to address that holds the real address
     data_bus = mem_read(MAR);
@@ -106,7 +108,6 @@ void STOREI(void) {
     write_MBR(data_bus);
     mem_write(MAR, MBR);
 }
-
 
 
 void SUBTI(void) {
