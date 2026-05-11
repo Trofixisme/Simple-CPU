@@ -1,32 +1,3 @@
-# ================================================================
-#  MARIE CPU - Full Instruction Test Suite
-#
-#  Tests: INPUT, OUTPUT, STORE, LOAD, ADD, SUBT,
-#         CLEAR, SKIPCOND (AC==0 and AC>0), JUMP, HALT
-#
-#  HOW TO RUN:
-#    Copy this file to your "Simple CPU" project folder, then:
-#    ./marie test_all.txt
-#
-#  Enter these 3 inputs when prompted:
-#    10  (first input)
-#     3  (second input)
-#    99  (third input)
-#
-#  EXPECTED OUTPUT:
-#    Output: 10   <- Test 1: INPUT -> OUTPUT passthrough
-#    Output: 13   <- Test 2: ADD  (10 + 3)
-#    Output: 7    <- Test 3: SUBT (10 - 3)
-#    Output: 0    <- Test 4: CLEAR resets AC to 0
-#    Output: 0    <- Test 5: SKIPCOND 1024 (AC==0) skip taken
-#    Output: 10   <- Test 6: SKIPCOND 2048 (AC>0)  skip taken
-#    Output: 99   <- Test 7: STORE then LOAD roundtrip
-#    Output: 99   <- Test 8: JUMP skips over a HALT
-#    CPU halted.  <- HALT reached
-# ================================================================
-
-# --- TEST 1: INPUT / OUTPUT passthrough ---
-# Read a number, output it immediately
 INPUT
 STORE 200
 OUTPUT

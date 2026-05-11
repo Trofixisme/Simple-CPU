@@ -7,7 +7,7 @@
 int assemble(char *line) {
     char mnemonic[10];
     int  operand = 0;
-    sscanf(line, "%s %d", mnemonic, &operand);
+    sscanf(line, "%s %x", mnemonic, &operand);
 
     if
         (strcmp(mnemonic, "LOAD") == 0) return MASK16((0x1 << 12) | MASK12(operand));
