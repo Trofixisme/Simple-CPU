@@ -35,10 +35,9 @@ int load_program(const char *filename) {
 }
 
 int main(int argc, const char * argv[]) {
-   
     
     //Be sure to temporarily replace this with the absolute filepath if you're using Xcode until someone figures out how to use the relative filepath with Xcode without failing
-    while (!halted && load_program("program.txt")) {
+    while (!halted && load_program("/Users/ziad/Desktop/Projects/Semester 2/Computer Architecture/Simple CPU/Simple CPU/program.txt")) {
         
         fetch();
         

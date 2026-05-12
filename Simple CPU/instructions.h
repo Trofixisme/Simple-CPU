@@ -10,6 +10,8 @@
 
 extern int halted;
 
+void print_cpu_state(void);
+
 void LOAD(void);
 void STORE(void);
 
